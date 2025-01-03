@@ -43,8 +43,8 @@ useEffect(()=>{
                 <div key={index} onClick={()=>navigate(`/appointment/${item._id}`)} className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500'>
                     <img className='bg-blue-50' src={item.image} alt="" />
                     <div className='p-4'>
-                        <div className='flex flex-col items-center gap-2 text-center text-green-500'>
-                            <p className='w-2 h-2 text-green-500 rounded-full'></p><p>Available</p>
+                        <div className='flex flex-col items-center gap-2 text-center'>
+                            <p className='w-2 h-2 text-green-500 rounded-full'></p><p>{item.available?<b className=' text-green-500'>Available</b>:<b className='text-red-500'>Not Available</b>}</p>
                         </div>
                         <p className='text-gray-900 text-lg font-medium'>{item.name}</p>
                         <p className='text-gray-600 text-sm'>{item.speciality}</p>
